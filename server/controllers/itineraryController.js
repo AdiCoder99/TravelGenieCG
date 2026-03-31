@@ -1,12 +1,10 @@
-import aiServices from "./gemini.js";
-import buildprompt from "../utils/promptBuilder.js";
+import createPlan from "../services/plannerServices.js";
 
 
 export const generateItinerary = async (req, res) => {
   const { budget, days, category } = req.body;
   try{
-    const prompt = await buildprompt({ budget, days, category});
-    const result = await aiServices(prompt);
+    const result = await createPlan({budget, days, category })
     res.json({ itinerary: result });
   }
   catch(error){

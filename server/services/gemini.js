@@ -1,13 +1,26 @@
 import { GoogleGenAI } from "@google/genai";
-
-const ai = new GoogleGenAI({apiKey: process.env.GEMINI_API_KEY});
+import dotenv from "dotenv";
+dotenv.config(); 
+const ai = new GoogleGenAI({apiKey:process.env.GEMINI_API_KEY});
 
 const aiServices = async (prompt) => {
-  const response = await ai.models.generateContent({
-    model: "gemini-3.1-pro-preview",
-    contents: prompt,
-  });
-  console.log(response.text);
+  try {
+    // console.log(process.env.GEMINI_API_KEY);
+    const response = await ai.models.generateContent({
+      model: "gemini-3-flash-preview",
+      contents: prompt,
+    });
+    console.log('Succeed in calling the API');
+    
+    console.log(response.text);
+  }
+  catch(error){
+    console.log('Failed to Call the api ');
+    
+    console.log(error);
+    
+  }
+  
 }
 
 export default aiServices;

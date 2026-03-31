@@ -2,11 +2,11 @@ import express from 'express'
 import dotenv from 'dotenv'
 import cors from 'cors'
 import itineraryRoutes from './routes/itineraryRoutes.js'
+dotenv.config()
 
 const app = express()
 
 app.use(cors())
-dotenv.config()
 
 app.use(express.json())
 
