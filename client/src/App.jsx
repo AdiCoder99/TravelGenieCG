@@ -5,9 +5,11 @@ import Hero from './Components/Hero'
 import Destinations from './Components/Destinations'
 import ItineraryPlanner from './Components/ItineraryPlanner'
 import TripPlanner from './Pages/TripPlanner'
+import { Toaster } from 'react-hot-toast'
 const App = () => {
   return (
     <>
+    <Toaster position='top-center' reverseOrder={false}/>
     <Navbar/>
     <Routes>
       <Route 
