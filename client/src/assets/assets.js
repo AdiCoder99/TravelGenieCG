@@ -91,6 +91,79 @@ const dest = [
         "description": "Rajiv Lochan Temple, also known as the 'Eye of Rajiv', is a sacred site located in the heart of Chhattisgarh. This ancient temple is dedicated to Lord Vishnu and is renowned for its unique architecture and spiritual significance. The temple's name derives from the legend of King Rajiv, who is said to have discovered the divine presence here.\n\nThe temple features intricate carvings and a serene ambiance that attracts devotees and tourists alike. Surrounded by lush greenery and natural beauty, it offers a peaceful retreat for those seeking spiritual solace and a deeper connection with the divine.\n\nVisitors to Rajiv Lochan Temple can witness traditional rituals and ceremonies, adding to the cultural richness of the experience. The site also provides an opportunity to explore the region's history and understand the deep-rooted traditions associated with this revered place of worship."
 
     }
+    ,
+    {
+        "id": "sirpur",
+
+        "title": "Sirpur Archaeological Site",
+
+        "img": dest2img,
+
+        "heroimg": dest2img,
+
+        "coordinates": {
+            "lat": 20.2794,
+            "lng": 82.1578
+        },
+
+        "tagline": "Ancient heritage on the banks of the Mahanadi",
+
+        "description": "Sirpur is one of the most important archaeological sites in Chhattisgarh, known for its ancient temples, Buddhist remains, and rich historical significance. Once a thriving cultural and political center, the site reveals layers of history through beautifully preserved ruins, sculpted stone structures, and excavations that continue to attract historians and travelers alike.\n\nThe village sits along the Mahanadi River, giving the entire area a quiet and reflective atmosphere that suits its heritage character. Visitors can explore remnants of old temples, monastic complexes, and intricate carvings that showcase the artistic and religious diversity of early India.\n\nSirpur is especially appealing for travelers who enjoy history, architecture, and offbeat destinations. It offers a calm experience away from busy city life, with enough depth to make even a short visit meaningful."
+    },
+    {
+        "id": "kanger-valley-national-park",
+
+        "title": "Kanger Valley National Park",
+
+        "img": dest3img,
+
+        "heroimg": dest3img,
+
+        "coordinates": {
+            "lat": 18.9470,
+            "lng": 81.9785
+        },
+
+        "tagline": "A dense green wilderness of Bastar",
+
+        "description": "Kanger Valley National Park is one of the most scenic and ecologically important forest landscapes in Bastar. Known for its thick sal forests, limestone caves, waterfalls, and rich biodiversity, the park is a favorite destination for nature lovers and adventure seekers.\n\nThe park is home to a variety of wildlife, birds, butterflies, and rare plant species, making it a valuable conservation area as well as a beautiful tourist spot. Popular attractions within and around the park include Tirathgarh Waterfall, Kutumsar Cave, and Kailash Gufa, each offering a different kind of natural experience.\n\nVisitors can enjoy forest drives, guided exploration, and peaceful views of untouched greenery. Kanger Valley is best visited during the cooler months, when the forest trails are comfortable and the scenery is at its most inviting."
+    },
+    {
+        "id": "danteshwari-temple",
+
+        "title": "Danteshwari Temple",
+
+        "img": dest4img,
+
+        "heroimg": dest4img,
+
+        "coordinates": {
+            "lat": 19.0059,
+            "lng": 81.4316
+        },
+
+        "tagline": "A sacred Shakti Peeth of Bastar",
+
+        "description": "Danteshwari Temple is one of the most revered religious sites in Bastar and is considered a major Shakti Peeth in the region. Dedicated to Goddess Danteshwari, the temple holds deep spiritual importance for devotees from across Chhattisgarh and neighboring states.\n\nThe temple architecture reflects traditional regional craftsmanship, while the atmosphere around the complex remains deeply devotional and culturally vibrant. During festivals, especially Bastar Dussehra, the temple becomes a focal point of rituals, processions, and community celebrations that highlight the living traditions of the region.\n\nFor visitors, Danteshwari Temple offers both a spiritual experience and a glimpse into Bastar's strong cultural identity. It is one of those places where faith, history, and local heritage come together naturally."
+    },
+    {
+        "id": "tirathgarh-waterfall",
+
+        "title": "Tirathgarh Waterfall",
+
+        "img": dest1img,
+
+        "heroimg": dest1hero,
+
+        "coordinates": {
+            "lat": 18.9738,
+            "lng": 81.9990
+        },
+
+        "tagline": "A stepped waterfall hidden in the forest",
+
+        "description": "Tirathgarh Waterfall is one of Bastar's most beautiful natural attractions, known for its white cascading streams that fall over multiple rocky levels. Surrounded by thick forest and rocky terrain, the waterfall creates a refreshing and scenic escape, especially after the monsoon when the water flow is strongest.\n\nThe site is ideal for photography, short nature walks, and relaxed visits with family or friends. The combination of forest sounds, misty water, and rugged landscape gives Tirathgarh a calm but dramatic character.\n\nIt is often visited together with Kanger Valley National Park, making it a strong addition to any Bastar travel plan. The best time to visit is from October to February, when the weather is pleasant and the surroundings are lush."
+    }
 ]
 
 export default {cg_logo, Slide1, Slide2, Slide3, Slide4, Slide5, Slide6, itinerarybg, plannerbg, dest, downarrow, contact, address, call, email}

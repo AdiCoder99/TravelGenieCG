@@ -8,7 +8,7 @@ const Destinations = () => {
       <div className='w-full text-4xl font-bold text-center mt-12 mb-12'>
         <h1>Popular Destinations</h1>
       </div>
-      <div className='flex md:mx-10 gap-10 flex-col mx-auto md:flex-row'>
+      <div className='flex md:mx-10 gap-10 flex-col mx-auto md:flex-row flex-wrap'>
         {assets.dest.map((item, index) => {
             return (
                 <Link to={`/destination/${item.id}`} key={index} className='relative w-90 h-110 mx-5 rounded-2xl group  cursor-pointer overflow-hidden'>
