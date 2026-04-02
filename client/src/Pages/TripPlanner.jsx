@@ -2,23 +2,32 @@ import React from 'react'
 import assets from '../assets/assets'
 import { useAppContext } from '../Context/AppContext'
 import toast from 'react-hot-toast'
+import { useNavigate } from 'react-router-dom'
 const TripPlanner = () => {
   
-  const { duration, setDuration, budget, setBudget, category, setCategory, aiPlanner } = useAppContext();
+  const navigate = useNavigate()
+  const { duration, setDuration, budget, setBudget, category, setCategory, aiPlanner, loading } = useAppContext();
  
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if(!duration || !budget || !category){
       toast.error('Please fill all the fields');
       return;
     }
     const data = {
-      duration,
+      days: duration,
       budget,
       category
     }
-    aiPlanner(data);
+
+    try {
+      await aiPlanner(data);
+      navigate('/planner/results');
+    }
+    catch (error) {
+      toast.error(error.message || 'Unable to generate itinerary');
+    }
   }
 
 
@@ -30,7 +39,10 @@ const TripPlanner = () => {
         alt="Planner Background"
       />
 
-      <div className='absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[800px] border border-white rounded-2xl bg-white/65 backdrop-blur-md p-6'>
+      <div
+        className='absolute top-[55%] left-1/2 -translate-x-1/2 -translate-y-1/2 border border-white rounded-2xl bg-white/65 backdrop-blur-md p-6'
+        style={{ height: '500px', width: '800px' }}
+      >
 
         <div className='flex flex-col items-center'>
           <h1 className='text-4xl font-bold font-serif'>Plan Your Perfect Trip</h1>
@@ -65,7 +77,13 @@ const TripPlanner = () => {
               <option value="mixed">✨ Mixed</option>
             </select>
           </div>
-          <button type='submit' className='bg-blue-500 text-white px-6 py-2 rounded-2xl text-lg font-bold hover:bg-blue-600 transition duration-300 cursor-pointer'>Generate Itinerary</button>
+          <button
+            type='submit'
+            disabled={loading}
+            className='bg-blue-500 text-white px-6 py-2 rounded-2xl text-lg font-bold hover:bg-blue-600 transition duration-300 cursor-pointer disabled:cursor-not-allowed disabled:opacity-70'
+          >
+            {loading ? 'Generating...' : 'Generate Itinerary'}
+          </button>
         </form>
       </div>
     </div>

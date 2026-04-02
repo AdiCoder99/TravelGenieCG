@@ -5,6 +5,7 @@ import Hero from './Components/Hero'
 import Destinations from './Components/Destinations'
 import ItineraryPlanner from './Components/ItineraryPlanner'
 import TripPlanner from './Pages/TripPlanner'
+import ItineraryResults from './Pages/ItineraryResults'
 import { Toaster } from 'react-hot-toast'
 const App = () => {
   return (
@@ -24,6 +25,11 @@ const App = () => {
 
       <Route path="/planner" 
       element={<TripPlanner/>} 
+      />
+
+      <Route
+        path="/planner/results"
+        element={<ItineraryResults />}
       />
 
     </Routes>

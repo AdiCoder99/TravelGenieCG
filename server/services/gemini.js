@@ -11,6 +11,8 @@ const aiServices = async (prompt) => {
       contents: prompt,
     });
     console.log('Succeed in calling the API');
+    console.log(response.text);
+    
     return response.text;
   }
   catch(error){
