@@ -10,8 +10,11 @@ const Destinations = () => {
       <div className='flex md:mx-10 gap-10 flex-col mx-auto md:flex-row'>
         {dest.map((item, index) => {
             return (
-                <div key={index} className='w-90 h-90 mx-5 rounded-2xl'>
-                    <img src={item} alt="" className='w-full h-full object-full rounded-2xl'/>
+                <div key={index} className='relative w-90 h-110 mx-5 rounded-2xl group  cursor-pointer overflow-hidden'>
+                    <img src={item} alt="" className='w-full h-full object-fill rounded-2xl group-hover:scale-110 duration-500'/>
+                    <div className='absolute bottom-6 left-0 w-full text-white text-center py-2  group-hover:-translate-y-4 duration-1000 ease-in-out'>
+                        <h2 className='text-lg font-bold'>{assets[`dest${index+1}t`]}</h2>
+                    </div>
                 </div>  
             )
         })}
