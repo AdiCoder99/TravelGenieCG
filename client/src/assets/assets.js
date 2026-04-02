@@ -17,6 +17,11 @@ import downarrow from './downarrow.png'
 // import dest4hero from './dest4hero.jpg'
 import itinerarybg from './itinerarybg.png'
 import plannerbg from './plannerbg.jpeg'
+import contact from './contact.png'
+
+import address from './address.png'
+import call from './call.png'
+import email from './email.png'
 
 const dest = [
     {
@@ -27,6 +32,11 @@ const dest = [
         "img": dest1img ,
 
         "heroimg": dest1hero ,
+
+        "coordinates": {
+            "lat": 20.8769,
+            "lng": 82.1073
+        },
 
         "tagline": "",
 
@@ -39,6 +49,11 @@ const dest = [
 
         "img": dest2img,
 
+        "coordinates": {
+            "lat": 22.1073,
+            "lng": 81.0338
+        },
+
         "tagline": "The Khajuraho of Chhattisgarh",
 
         "description" : "Often referred to as the 'Khajuraho of Chhattisgarh', Bhoramdeo Temple stands as a remarkable testament to the region’s rich cultural and architectural heritage. Built between the 11th and 12th centuries, this ancient temple is dedicated to Lord Shiva and showcases the elegance of Nagara-style temple architecture. Its beautifully carved stone walls are adorned with intricate sculptures that reflect both spiritual symbolism and the artistic brilliance of the era.\n\nSet against the scenic backdrop of the Maikal hills and surrounded by dense greenery, the temple offers a serene and almost timeless atmosphere. The peaceful environment, combined with the detailed craftsmanship visible in every corner of the structure, makes it a captivating destination for history enthusiasts, photographers, and spiritual seekers alike.\n\nOne of the most striking aspects of Bhoramdeo is its intricate carvings, which often draw comparisons to the famous temples of Khajuraho. These sculptures not only depict mythological themes but also provide a glimpse into the lifestyle and artistic expressions of ancient India.\n\nBeyond its architectural beauty, the temple holds deep religious significance and continues to be an important center of devotion. Visitors are drawn not only by its spiritual aura but also by the opportunity to experience a perfect blend of history, nature, and tranquility in one place."
@@ -49,6 +64,11 @@ const dest = [
         "title": "Chitrakote Waterfalls",
 
         "img": dest3img,
+
+        "coordinates": {
+            "lat": 19.2072,
+            "lng": 81.6971
+        },
 
         "tagline": "The Niagara Falls of India",
 
@@ -61,6 +81,11 @@ const dest = [
 
         "img": dest4img ,   
 
+        "coordinates": {
+            "lat": 20.9658,
+            "lng": 82.3143
+        },
+
         "tagline": "Spiritual heart of Chhattisgarh",
 
         "description": "Rajiv Lochan Temple, also known as the 'Eye of Rajiv', is a sacred site located in the heart of Chhattisgarh. This ancient temple is dedicated to Lord Vishnu and is renowned for its unique architecture and spiritual significance. The temple's name derives from the legend of King Rajiv, who is said to have discovered the divine presence here.\n\nThe temple features intricate carvings and a serene ambiance that attracts devotees and tourists alike. Surrounded by lush greenery and natural beauty, it offers a peaceful retreat for those seeking spiritual solace and a deeper connection with the divine.\n\nVisitors to Rajiv Lochan Temple can witness traditional rituals and ceremonies, adding to the cultural richness of the experience. The site also provides an opportunity to explore the region's history and understand the deep-rooted traditions associated with this revered place of worship."
@@ -68,4 +93,4 @@ const dest = [
     }
 ]
 
-export default {cg_logo, Slide1, Slide2, Slide3, Slide4, Slide5, Slide6, itinerarybg, plannerbg, dest, downarrow}
+export default {cg_logo, Slide1, Slide2, Slide3, Slide4, Slide5, Slide6, itinerarybg, plannerbg, dest, downarrow, contact, address, call, email}
