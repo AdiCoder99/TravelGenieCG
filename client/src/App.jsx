@@ -7,6 +7,7 @@ import ItineraryPlanner from './Components/ItineraryPlanner'
 import TripPlanner from './Pages/TripPlanner'
 import ItineraryResults from './Pages/ItineraryResults'
 import { Toaster } from 'react-hot-toast'
+import DestinationPage from './Pages/DestinationPage'
 const App = () => {
   return (
     <>
@@ -31,6 +32,7 @@ const App = () => {
         path="/planner/results"
         element={<ItineraryResults />}
       />
+      <Route path="/destination/:id" element={<DestinationPage />} />
 
     </Routes>
     </>
