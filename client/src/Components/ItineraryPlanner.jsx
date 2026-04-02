@@ -10,7 +10,7 @@ const ItineraryPlanner = () => {
       <div className='text-center text-4xl font-bold font-serif mb-8'>
         <h1>AI Itinerary Planner</h1>
       </div>
-      <div className='flex justify-center items-center  border-2 border-gray-300 relative rounded-lg mx-10 h-80 w-[90%]'>
+      <div className='flex justify-center items-center  border-2 border-gray-300 relative rounded-lg mx-10 h-120 w-[90%]'>
         <img src={assets.itinerarybg} alt="" className='w-full h-full object-cover rounded-lg'/>
         <div className='absolute inset-0 flex items-center justify-center p-4 flex-col gap-10'>
           <p className='text-white text-2xl font-serif text-center'>

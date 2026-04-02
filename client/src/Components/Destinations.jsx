@@ -7,7 +7,7 @@ const Destinations = () => {
       <div className='w-full text-4xl font-bold text-center mt-12 mb-12'>
         <h1>Popular Destinations</h1>
       </div>
-      <div className='flex mx-10 gap-10'>
+      <div className='flex md:mx-10 gap-10 flex-col mx-auto md:flex-row'>
         {dest.map((item, index) => {
             return (
                 <div key={index} className='w-90 h-90 mx-5 rounded-2xl'>
