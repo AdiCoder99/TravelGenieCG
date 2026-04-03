@@ -19,14 +19,14 @@ const Navbar = () => {
   return (
     <div className={`fixed top-0 z-5 w-full flex justify-between items-center p-4 bg-transparent  h-24 hover:bg-gray-100 hover:text-gray-900 transition duration-300 ease-in-out font-serif
   ${isScrolled ? "bg-white/70 backdrop-blur-md shadow-md text-black" : "bg-transparent  text-white"}`}> 
-      <div>
+      <Link to="/"><div>
         <img src= {assets.cg_logo} alt="" className='h-20'/>
-      </div>
+      </div></Link>
       <div>
       <ul className='flex gap-8 text-lg '>
         <li>Where to Go?</li>
         <Link to="/planner"><li>Plan Your Trip</li></Link>
-        <li>Experiences</li>
+        <Link to="/experiences"><li>Experiences</li></Link>
       </ul>
       </div>
     </div>

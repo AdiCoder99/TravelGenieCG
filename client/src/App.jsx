@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Routes , useLocation} from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Navbar from './Components/Navbar'
 import Hero from './Components/Hero'
 import Destinations from './Components/Destinations'
@@ -9,6 +9,7 @@ import ItineraryResults from './Pages/ItineraryResults'
 import { Toaster } from 'react-hot-toast'
 import DestinationPage from './Pages/DestinationPage'
 import NotFoundPage from './Pages/NotFoundPage'
+import ExperiencePage from './Pages/ExperiencePage'
 const App = () => {
   return (
     <>
@@ -28,6 +29,8 @@ const App = () => {
       <Route path="/planner" 
       element={<TripPlanner/>} 
       />
+
+      <Route path="/experiences" element={<ExperiencePage />} />
 
       <Route
         path="/planner/results"

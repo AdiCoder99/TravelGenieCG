@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 const Destinations = () => {
     
   return (
-    <div className='font-serif flex flex-col mt-10'>
+    <div className='font-serif flex flex-col mt-10 '>
       <div className='w-full text-4xl font-bold text-center mt-12 mb-12'>
         <h1>Popular Destinations</h1>
       </div>
-      <div className='flex md:mx-10 gap-10 flex-col mx-auto md:flex-row flex-wrap'>
+      <div className='flex md:mx-10 gap-10 flex-col md:flex-row flex-wrap justify-center '>
         {assets.dest.map((item, index) => {
             return (
                 <Link to={`/destination/${item.id}`} key={index} className='relative w-90 h-110 mx-5 rounded-2xl group  cursor-pointer overflow-hidden'>

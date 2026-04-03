@@ -2,12 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import assets from '../assets/assets';
 const DestinationPage = () => {
-    const { id } = useParams(); //Remove Scroll down on click and add scroll to top on page load
-    useEffect(() => {
-        window.scrollTo(0, 0); 
-    }, []);
+    const { id } = useParams();
 
-    const [contactVisible, setContactVisible] = useState(true);
+    const [contactVisible, setContactVisible] = useState(false);
     const destination = assets.dest.find((item) => item.id === id);
 
     if (!destination) {
@@ -44,7 +41,7 @@ const DestinationPage = () => {
               <div onClick={() =>setContactVisible(!contactVisible)} className='border border-gray-500 mt-10 px-4 bg-white h-14 w-80 flex justify-start items-center rounded-lg text-white font-bold text-lg cursor-pointer hover:bg-gray-200 transition duration-300 '>
                 <img src= {assets.contact} className='h-7' alt="" />
                 <p className='pl-2 text-black text-center'>Contact</p>
-                <img src= {assets.downarrow} className='invert ml-40' alt="" />
+                <img src= {assets.downarrow} className= {`invert ml-40 duration-500 ${contactVisible? 'rotate-180' : 'rotate-0'}`} alt="" />
               </div>
               <div>
                 {contactVisible && (
