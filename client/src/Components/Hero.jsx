@@ -23,9 +23,9 @@ const slideCaptions = [
     note: 'Dramatic water views that feel alive during the monsoon.',
   },
   {
-    title: 'Heritage Moments',
-    place: 'Sirpur & Bhoramdeo',
-    note: 'Ancient stonework and timeless cultural character.',
+    title: "Misty Rural Landscape",
+    place: "Chhattisgarh, India",
+    note: "Foggy farmland at sunrise."
   },
   {
     title: 'Nature Views',
@@ -67,7 +67,7 @@ const Hero = () => {
         spaceBetween={50}
         centeredSlides={true}
         autoplay={{
-          delay: 2000,
+          delay: 3000,
           disableOnInteraction: false,
           reverseDirection: false,
         }}

@@ -11,6 +11,9 @@ export const AppContextProvider = ({ children }) => {
     const [itinerary, setItinerary] = React.useState(null)
     const [loading, setLoading] = React.useState(false)
     const [error, setError] = React.useState('')
+    const [directions, setDirections] = React.useState(null)
+    const [directionsLoading, setDirectionsLoading] = React.useState(false)
+    const [directionsError, setDirectionsError] = React.useState('')
 
     const parseItinerary = (payload) => {
         if (payload && typeof payload === 'object' && payload.days) {
@@ -81,6 +84,84 @@ export const AppContextProvider = ({ children }) => {
         }
     }
 
+    const fetchDirections = async (from, to) => {
+        setDirectionsLoading(true);
+        setDirectionsError('');
+        setDirections(null);
+
+        try {
+            const response = await fetch('http://localhost:3000/api/itinerary/directions', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ from, to })
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to fetch directions');
+            }
+
+            const result = await response.json();
+            console.log('===== FULL API Response:', result);
+            
+            // The server wraps response in { success: true, data: parsedDirections }
+            let directionsData = result.data || result;
+            
+            // If directions is a string (JSON wrapped in markdown), parse it
+            if (directionsData.directions && typeof directionsData.directions === 'string') {
+                console.log('===== Found directions as string, parsing...');
+                const directionString = directionsData.directions;
+                
+                // Remove markdown code blocks
+                const cleanedPayload = directionString
+                    .replace(/```json\s*/g, '')
+                    .replace(/```\s*/g, '')
+                    .trim();
+
+                // Extract JSON from the string
+                const jsonStart = cleanedPayload.indexOf('{');
+                const jsonEnd = cleanedPayload.lastIndexOf('}');
+
+                if (jsonStart === -1 || jsonEnd === -1) {
+                    throw new Error('Could not find JSON in directions response');
+                }
+
+                const jsonString = cleanedPayload.slice(jsonStart, jsonEnd + 1);
+
+                try {
+                    directionsData = JSON.parse(jsonString);
+                    console.log('===== Successfully parsed directions JSON');
+                } catch (parseError) {
+                    console.error('===== Failed to parse directions JSON:', parseError);
+                    throw new Error('Failed to parse directions JSON');
+                }
+            }
+
+            console.log('===== Extracted directionsData:', directionsData);
+            console.log('===== directionsData.routes:', directionsData?.routes);
+
+            // Validate that we have routes
+            if (!directionsData || !directionsData.routes || !Array.isArray(directionsData.routes)) {
+                console.error('===== VALIDATION FAILED - No routes found');
+                throw new Error('Invalid response format - routes not found');
+            }
+
+            console.log('===== SUCCESS - Setting directions with', directionsData.routes.length, 'routes');
+            setDirections(directionsData);
+            return directionsData;
+        }
+        catch (error) {
+            console.error('===== FETCH ERROR:', error);
+            setDirectionsError(error.message || 'Something went wrong while fetching directions');
+            setDirections(null);
+            throw error;
+        }
+        finally {
+            setDirectionsLoading(false);
+        }
+    }
+
     const value = {
         duration,
         setDuration,
@@ -91,7 +172,11 @@ export const AppContextProvider = ({ children }) => {
         itinerary,
         loading,
         error,
-        aiPlanner
+        aiPlanner,
+        directions,
+        directionsLoading,
+        directionsError,
+        fetchDirections
     }
 
 

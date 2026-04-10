@@ -10,6 +10,8 @@ import { Toaster } from 'react-hot-toast'
 import DestinationPage from './Pages/DestinationPage'
 import NotFoundPage from './Pages/NotFoundPage'
 import ExperiencePage from './Pages/ExperiencePage'
+import HowToReachPage from './Pages/HowToReachPage'
+import WhereToGo from './Pages/WhereToGo'
 const App = () => {
   return (
     <>
@@ -28,8 +30,8 @@ const App = () => {
 
       <Route path="/planner" 
       element={<TripPlanner/>} 
-      />
-
+      />`
+      <Route path="/where-to-go" element={<WhereToGo />} />
       <Route path="/experiences" element={<ExperiencePage />} />
 
       <Route
@@ -37,6 +39,11 @@ const App = () => {
         element={<ItineraryResults />}
       />
       <Route path="/destination/:id" element={<DestinationPage />} />
+
+      <Route path='/destination/:id/how-to-reach' 
+      element = {<HowToReachPage/>}
+      />
+
       <Route path="*" element={<NotFoundPage />} />
 
     </Routes>

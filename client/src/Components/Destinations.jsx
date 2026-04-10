@@ -17,7 +17,7 @@ const Destinations = () => {
       <div className='absolute -left-24 top-16 h-72 w-72 rounded-full bg-emerald-300/25 blur-3xl' />
       <div className='absolute -right-20 bottom-10 h-80 w-80 rounded-full bg-lime-300/20 blur-3xl' />
 
-      <div className='relative mx-auto max-w-7xl px-6 py-16 md:px-10 lg:px-12'>
+      <div className='relative mx-auto max-w-8xl px-6 py-16 md:px-10 lg:px-12'>
         <div className='mx-auto max-w-2xl text-center'>
           <p className='text-sm font-semibold uppercase tracking-[0.35em] text-emerald-700'>Explore the region</p>
           <h2 className='mt-4 text-4xl font-bold text-slate-900 md:text-5xl'>Popular Destinations</h2>
@@ -26,13 +26,13 @@ const Destinations = () => {
           </p>
         </div>
 
-        <div className='mt-12 grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 justify-items-center'>
-          {assets.dest.map((item, index) => {
+        <div className='mt-12 grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-3 justify-items-center w-full'>
+          {assets.dest.slice(0, 6).map((item, index) => {
             return (
               <Link
                 to={`/destination/${item.id}`}
                 key={index}
-                className='group relative h-110 w-90 cursor-pointer overflow-hidden rounded-3xl border border-slate-200 bg-white/70 shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl backdrop-blur-sm'
+                className='group relative h-90 w-50 md:h-110 md:w-90 cursor-pointer overflow-hidden rounded-3xl border border-slate-200 bg-white/70 shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl backdrop-blur-sm mx-auto'
               >
                 <img src={item.img} alt="" className='h-full w-full object-cover transition duration-700 group-hover:scale-110'/>
                 <div className='absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/10 to-transparent' />

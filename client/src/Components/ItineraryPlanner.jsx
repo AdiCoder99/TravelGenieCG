@@ -27,11 +27,11 @@ const ItineraryPlanner = () => {
 
         <div className='absolute inset-0 flex items-center justify-center p-4 flex-col gap-10'>
           <div className='max-w-3xl rounded-3xl border border-white/20 bg-white/10 px-6 py-8 text-center backdrop-blur-xs shadow-lg'>
-            <p className='text-white text-3xl font-serif text-center'>
+            <p className='text-white md:text-3xl font-serif text-center'>
               Plan Your Trip with AI: Get Personalized Itineraries Tailored to Your Preferences and Interests.
             </p>
           </div>
-          <button onClick={() => navigate('/planner')} className='bg-emerald-500 text-white px-6 py-2 rounded-2xl text-lg font-bold hover:bg-emerald-600 transition duration-300 cursor-pointer shadow-lg shadow-emerald-900/30'>
+          <button onClick={() => navigate('/planner')} className='bg-emerald-500 text-white px-6 py-2 rounded-2xl md:text-lg font-bold hover:bg-emerald-600 transition duration-300 cursor-pointer shadow-lg shadow-emerald-900/30'>
             Checkout Now!
           </button>
         </div>

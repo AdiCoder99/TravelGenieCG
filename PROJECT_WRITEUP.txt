@@ -1,0 +1,260 @@
+COLLEGE MINI PROJECT REPORT
+
+AI-POWERED CHHATTISGARH TRAVEL PLANNER
+
+A College Mini Project Report
+
+Submitted in partial fulfillment of the requirements for the award of the degree of
+[Your Degree Program Name]
+
+Submitted by
+[Your Name]
+[Roll Number]
+[Department / Branch]
+[College Name]
+
+Academic Year: 2025-2026
+
+============================================================
+
+CERTIFICATE
+
+This is to certify that the project titled “AI-Powered Chhattisgarh Travel Planner” is a bonafide work carried out by [Your Name], [Roll Number], in partial fulfillment of the requirements for the award of the degree of [Your Degree Program Name].
+
+This project has been completed under the guidance of [Guide Name] during the academic year 2025-2026.
+
+Guide Signature: ____________________
+Head of Department: ____________________
+Date: ____________________
+Place: ____________________
+
+============================================================
+
+DECLARATION
+
+I hereby declare that this project report titled “AI-Powered Chhattisgarh Travel Planner” is my original work and has been prepared by me for academic submission. The work presented in this report has not been submitted elsewhere for the award of any degree or diploma.
+
+Submitted by: [Your Name]
+Roll Number: [Roll Number]
+Date: ____________________
+
+============================================================
+
+ACKNOWLEDGEMENT
+
+I would like to express my sincere gratitude to my project guide [Guide Name] for continuous support, valuable suggestions, and encouragement throughout the development of this mini project.
+
+I also thank the faculty members of [Department Name], my college, and my classmates for their guidance and help during the completion of this work. Finally, I am grateful to my family and friends for their motivation and support.
+
+============================================================
+
+ABSTRACT
+
+The AI-Powered Chhattisgarh Travel Planner is a web-based travel recommendation and itinerary generation system developed as a college mini project. The application helps users explore tourist destinations in Chhattisgarh, view destination details, understand different travel experiences, and generate a personalized day-wise itinerary using Google Gemini AI.
+
+The system accepts user inputs such as trip duration, budget, and travel category, then sends these preferences to a backend service. The backend creates a prompt for the AI model, receives the generated response, and returns a structured itinerary to the frontend. The project demonstrates practical use of modern web development, API integration, responsive UI design, and AI-assisted content generation.
+
+============================================================
+
+TABLE OF CONTENTS
+
+1. Introduction
+2. Problem Statement
+3. Objectives
+4. Scope of the Project
+5. Technology Used
+6. System Architecture
+7. Modules of the Project
+8. Working Principle
+9. Main Features
+10. Advantages
+11. Limitations
+12. Future Enhancements
+13. Conclusion
+14. Suggested Viva Questions
+15. Appendix (Setup and Run Instructions)
+
+============================================================
+
+1. INTRODUCTION
+
+Travel planning often requires time, research, and decision-making. Many travelers want an itinerary that matches their budget, available days, and travel interests. This project addresses that need by combining a travel discovery interface with an AI-based itinerary generator.
+
+The application focuses on tourist destinations in Chhattisgarh, including temples, waterfalls, heritage sites, and forest attractions. Users can browse places, understand the type of experience each location offers, and generate a custom travel plan suited to their preferences.
+
+This mini project demonstrates how a frontend application can interact with a backend API and an AI service to solve a practical real-world problem.
+
+2. PROBLEM STATEMENT
+
+Planning a trip manually can be difficult because it involves selecting destinations based on interests, balancing time and budget, arranging places in a logical order, identifying suitable travel categories, and creating a day-wise itinerary.
+
+The goal of this project is to simplify this process by providing an AI-powered planner that can generate a structured itinerary quickly.
+
+3. OBJECTIVES
+
+The main objectives of the project are:
+
+- To build an attractive tourism-focused web application.
+- To present selected destinations of Chhattisgarh.
+- To allow users to explore different travel experiences.
+- To generate a personalized itinerary using AI.
+- To display itinerary results in a clear and readable format.
+- To practice full-stack web application development.
+
+4. SCOPE OF THE PROJECT
+
+The project includes the following features:
+
+- Home page with a visual travel banner and featured destinations.
+- Destination detail pages with descriptions and map links.
+- Experiences page for selecting travel themes.
+- AI itinerary planner form.
+- Backend API for itinerary generation.
+- Results page for viewing the generated plan.
+
+This project is designed for educational purposes and demonstrates how AI can be applied in a tourism-related application.
+
+5. TECHNOLOGY USED
+
+Frontend:
+- React
+- Vite
+- Tailwind CSS
+- React Router
+- React Hot Toast
+- Swiper
+
+Backend:
+- Node.js
+- Express.js
+- CORS
+- dotenv
+- nodemon
+
+AI Service:
+- Google Gemini API using the GenAI SDK
+
+6. SYSTEM ARCHITECTURE
+
+The project follows a client-server architecture with three layers:
+
+a) Frontend Layer
+The React frontend handles user interaction, navigation, form input, and result display.
+
+b) Backend Layer
+The Express backend receives itinerary requests, builds prompts, and forwards them to the AI service.
+
+c) AI Layer
+Google Gemini generates the trip itinerary based on budget, duration, and category.
+
+Data Flow:
+User Input -> Frontend Request -> Backend Prompt Creation -> Gemini Response -> Frontend Itinerary Display
+
+7. MODULES OF THE PROJECT
+
+Home Module:
+Introduces the travel planner with a hero section, destination cards, and a call-to-action to start planning.
+
+Destination Module:
+Displays destination-specific pages including title, description, image, and Google Maps link.
+
+Experience Module:
+Helps users choose a trip style such as spiritual travel, waterfall visits, heritage exploration, or forest adventures.
+
+Planner Module:
+Collects duration, budget, and travel category. Also includes preset options for quicker input.
+
+Results Module:
+Displays AI-generated itinerary in day-wise card format.
+
+Backend Module:
+Handles route processing, controller logic, service methods, prompt construction, and Gemini API communication.
+
+8. WORKING PRINCIPLE
+
+Step 1: The user opens the website and browses destinations and experiences.
+Step 2: The user navigates to the planner page.
+Step 3: The user enters duration, budget, and category.
+Step 4: The frontend sends the input to the backend API.
+Step 5: The backend creates a prompt for Gemini AI.
+Step 6: Gemini returns itinerary content in a structured format.
+Step 7: The frontend parses and displays the itinerary on the results page.
+
+9. MAIN FEATURES
+
+- Responsive and visually rich UI.
+- Tourism-focused destination showcase.
+- AI-powered itinerary generation.
+- Category-based travel planning.
+- Day-wise travel result display.
+- Google Maps integration for destination view.
+- Route-based navigation.
+- Loading and error handling states.
+
+10. ADVANTAGES
+
+- Saves time in trip planning.
+- Provides personalized travel suggestions.
+- Makes destination discovery easier.
+- Combines tourism content with AI support.
+- Demonstrates practical full-stack implementation.
+
+11. LIMITATIONS
+
+- No user login or authentication system.
+- No database for saving itinerary history.
+- Itinerary quality depends on AI output quality.
+- Frontend API base URL is hardcoded for local usage.
+- Coverage is limited to available destination data in the project.
+
+12. FUTURE ENHANCEMENTS
+
+- User authentication and profile management.
+- Itinerary saving and retrieval history.
+- Database integration.
+- Environment-based API configuration.
+- Better validation and fallback handling.
+- Accommodation and transport suggestions.
+- Export itinerary as PDF.
+- Multi-language support.
+
+13. CONCLUSION
+
+The AI-Powered Chhattisgarh Travel Planner is a useful college mini project that combines travel exploration, frontend UI design, backend API development, and AI-based content generation. It demonstrates how modern web technologies can solve a real travel planning problem in a practical and interactive way.
+
+The project successfully integrates React, Node.js, and Gemini AI to generate personalized travel itineraries, making it a strong applied full-stack project.
+
+14. SUGGESTED VIVA QUESTIONS
+
+1. What is the main purpose of your project?
+2. Which technologies did you use and why?
+3. How does the AI itinerary generation work?
+4. What is the role of the backend in your project?
+5. How did you handle route navigation in React?
+6. What are the current limitations?
+7. What future improvements can be made?
+
+15. APPENDIX: SETUP AND RUN INSTRUCTIONS
+
+Prerequisites:
+- Node.js 18+ (recommended 20+)
+- npm
+- Gemini API key
+
+Frontend Setup:
+1. Open terminal in the client folder.
+2. Run: npm install
+3. Run: npm run dev
+
+Backend Setup:
+1. Open terminal in the server folder.
+2. Run: npm install
+3. Run: npm run server
+
+Environment Variable:
+Create a file named .env inside server and add:
+GEMINI_API_KEY=your_gemini_api_key_here
+
+============================================================
+
+END OF REPORT
